@@ -61,7 +61,7 @@ me.skills.pop()
     Write a function called "dice"; it should randomize an integer number between 1 and 6.
 */
 
-let dice = function(){
+const dice = function(){
     console.log(Math.floor(Math.random() * 6) + 1)
 }
 dice()
@@ -70,7 +70,7 @@ dice()
     Write a function called "whoIsBigger" which receives 2 numbers as parameters and returns the biggest one.
 */
 
-let whoIsBigger = function(num1, num2){
+const whoIsBigger = function(num1, num2){
 if (num1 > num2){
     return num1
 }
@@ -85,7 +85,7 @@ console.log(whoIsBigger(9, 5))
     Ex. splitMe("I love coding") => returns ["I", "Love", "Coding"]
 */
 
-let splitMe = function(userString){
+const splitMe = function(userString){
 return userString.split(" ")
 }
 
@@ -95,7 +95,7 @@ console.log(splitMe("I love coding"))
     Write a function called "deleteOne" which receives a string and a boolean as parameters. If the boolean value is true it should return the string without the first letter, otherwise it should remove the last one from it.
 */
 
-let deleteOne = function(str, bool){
+const deleteOne = function(str, bool){
 
 if (bool === true) {
     return str.slice(1)
@@ -112,9 +112,23 @@ console.log(deleteOne("Hello", false))
    Ex.: onlyLetters("I have 4 dogs")  => returns "I have  dogs"
 */
 
+
+const onlyLetters = function(str){
+  str = str.replace(/[0-9]/g, '');
+return str
+}
+
+console.log(onlyLetters("I have 4 dogs"))
+
 /* Ex.6 
    Write a function called "isThisAnEmail" which receives a string as a parameter and returns true if the string is a valid email address.
 */
+
+const isThisAnEmail = function(str){
+  return str.includes('@') === true && str.includes('.') === true ? true : false
+}
+
+console.log(isThisAnEmail("test@test.com"))
 
 /* Ex.7
    Write a function called "whatDayIsIt" that should return the current day of the week.
