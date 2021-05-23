@@ -176,11 +176,26 @@ console.log(rollTheDices(5))
    Write a function called "howManyDays" which receives a date as a parameter and should return the number of days passed since that date.
 */
 
-// const howManyDays = function(date){
+const howManyDays = function(date){
+currentDate = new Date()
+inputDate = new Date(date)
 
+
+let timeDiff = currentDate.getTime() - inputDate.getTime()
+let dayDiff = timeDiff / (1000 * 3600 * 24);
+
+
+return ("It has been " + Math.round(dayDiff) + " days since this date.")
+}
+
+console.log(howManyDays("04/22/2020"))
+
+// if (currentDate[2] > inputDate[2]){
+// difference[2] = (Math.abs(currentDate[2] - inputDate[2])) * 365
 // }
-
-// howManyDays()
+// else if(currentDate[1] > inputDate[1]){
+//   difference[1] = (Math.abs(currentDate[1] - inputDate[1])) * 365
+// }
 /* Ex.10
    Write a function called "isTodayMyBirthday" which should return true if today's your birthday, false otherwise.
 */
