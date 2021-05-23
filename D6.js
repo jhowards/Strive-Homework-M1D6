@@ -134,6 +134,13 @@ console.log(isThisAnEmail("test@test.com"))
    Write a function called "whatDayIsIt" that should return the current day of the week.
 */
 
+const whatDayIsIt = function(){
+let days = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday']
+return days[new Date().getDay()]
+}
+console.log(whatDayIsIt())
+
+
 /* Ex.8
     Write a function called "rollTheDices" which receives a number as a parameter.
     It should invoke the dice() function defined in Ex1 the specified amount of times,
@@ -144,6 +151,13 @@ console.log(isThisAnEmail("test@test.com"))
         values: [3, 3, 4]
     }
 */
+
+const rollTheDices = function(num){
+  dice()
+}
+
+console.log(rollTheDices(2))
+
 
 /* Ex.9
    Write a function called "howManyDays" which receives a date as a parameter and should return the number of days passed since that date.
