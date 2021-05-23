@@ -62,9 +62,9 @@ me.skills.pop()
 */
 
 const dice = function(){
-    console.log(Math.floor(Math.random() * 6) + 1)
+    return (Math.floor(Math.random() * 6) + 1)
 }
-dice()
+console.log(dice())
 
 /* Ex.2 
     Write a function called "whoIsBigger" which receives 2 numbers as parameters and returns the biggest one.
@@ -74,12 +74,15 @@ const whoIsBigger = function(num1, num2){
 if (num1 > num2){
     return num1
 }
+else if(num1 === num2){
+return "These numbers are the same!"
+}
 else{
     return num2
 }
 }
 
-console.log(whoIsBigger(9, 5))
+console.log(whoIsBigger(3, 5))
 /* Ex.3
     Write a function called "splitMe" which receives a string as a parameter and returns an array with every word in that string.
     Ex. splitMe("I love coding") => returns ["I", "Love", "Coding"]
@@ -153,16 +156,31 @@ console.log(whatDayIsIt())
 */
 
 const rollTheDices = function(num){
-  dice()
+  let numbersObj = {
+    sum : null,
+    values: []
+  }
+  for (let i = 0; i < num; i++) {
+    let diceRoll = dice()
+numbersObj.sum += diceRoll
+numbersObj.values.push(diceRoll)
+
+}
+return numbersObj
 }
 
-console.log(rollTheDices(2))
+console.log(rollTheDices(5))
 
 
 /* Ex.9
    Write a function called "howManyDays" which receives a date as a parameter and should return the number of days passed since that date.
 */
 
+// const howManyDays = function(date){
+
+// }
+
+// howManyDays()
 /* Ex.10
    Write a function called "isTodayMyBirthday" which should return true if today's your birthday, false otherwise.
 */
