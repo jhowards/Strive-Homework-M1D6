@@ -421,6 +421,16 @@ console.log(getMovieById(movies, 7))
     Write a function called "sumAllTheYears" which returns the sum of all the years in which the movies provided have been produced.
 */
 
+const sumAllTheYears = function(movies){
+  let yearSum = null
+  for (let i = 0; i < movies.length; i++){
+yearSum += parseInt(movies[i].Year)
+console.log(yearSum)
+}
+return yearSum
+}
+console.log(sumAllTheYears(movies))
+
 /* Ex.18
     Write a function called "searchByTitle" which receives a string as a parameter and returns all the movies which contain that string in the title.
 */
