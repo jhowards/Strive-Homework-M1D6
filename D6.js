@@ -190,15 +190,26 @@ return ("It has been " + Math.round(dayDiff) + " days since this date.")
 
 console.log(howManyDays("04/22/2020"))
 
-// if (currentDate[2] > inputDate[2]){
-// difference[2] = (Math.abs(currentDate[2] - inputDate[2])) * 365
-// }
-// else if(currentDate[1] > inputDate[1]){
-//   difference[1] = (Math.abs(currentDate[1] - inputDate[1])) * 365
-// }
+
 /* Ex.10
    Write a function called "isTodayMyBirthday" which should return true if today's your birthday, false otherwise.
 */
+
+const isTodayMyBirthday = function(){
+  currentDate = new Date().toLocaleString('en-US').split("/")
+  myBirthday = new Date("05/24/1995").toLocaleString('en-US').split("/")
+
+if (currentDate[0] === myBirthday[0] && currentDate[1] === myBirthday[1]){
+  return true
+} else{
+  return false
+}
+}
+
+console.log(isTodayMyBirthday())
+
+
+
 
 // JS Arrays // Objs
 // NOTE: movies array is defined at the end of this file!
