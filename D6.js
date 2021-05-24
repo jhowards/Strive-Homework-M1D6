@@ -477,6 +477,19 @@ console.log(searchAndDivide(movies, "rings"))
    Write a function called "removeIndex" which receives a number as a parameter and returns the movies array without the element in the given position.
 */
 
+const removeIndex = function(movies, num){
+  let newArray = []
+  for (let i = 0; i < movies.length; i++){
+    if(num !== i)
+    {
+newArray.push(movies[i])
+    }
+  }
+  return newArray
+}
+
+console.log(removeIndex(movies, 3))
+
 // [EXTRAS] JS Advanced
 
 /* Ex.21
