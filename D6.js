@@ -425,7 +425,6 @@ const sumAllTheYears = function(movies){
   let yearSum = null
   for (let i = 0; i < movies.length; i++){
 yearSum += parseInt(movies[i].Year)
-console.log(yearSum)
 }
 return yearSum
 }
@@ -435,6 +434,19 @@ console.log(sumAllTheYears(movies))
     Write a function called "searchByTitle" which receives a string as a parameter and returns all the movies which contain that string in the title.
 */
 
+const searchByTitle = function(movies, str){
+str = str.toUpperCase()
+let moviesArray = []
+  for (let i = 0; i < movies.length; i++){
+    let title = movies[i].Title
+    if(title.toUpperCase().search(str) > -1){
+moviesArray.push(title)
+    }
+}
+return moviesArray
+  }
+
+console.log(searchByTitle(movies, "war"))
 /* Ex.19
     Write a function called "searchAndDivide" which receives a string as a parameter and returns an object;
     this object should contain an array called "match", made by all the movies which contain the given string in the title,
