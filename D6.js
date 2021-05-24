@@ -447,6 +447,7 @@ return moviesArray
   }
 
 console.log(searchByTitle(movies, "war"))
+
 /* Ex.19
     Write a function called "searchAndDivide" which receives a string as a parameter and returns an object;
     this object should contain an array called "match", made by all the movies which contain the given string in the title,
