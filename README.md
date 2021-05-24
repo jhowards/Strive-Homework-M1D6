@@ -1,2 +1,2 @@
 # Strive-Homework-M1D6
-# Functions, objects and arrays 
+Functions, objects and arrays 
