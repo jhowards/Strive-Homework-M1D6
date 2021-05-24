@@ -406,6 +406,17 @@ console.log(onlyInThisMillennium(movies))
     Write a function called "getMovieById" which receives an id as a parameter and returns the movie with the given id.
 */
 
+const getMovieById = function(movies, id){
+
+  for (let i = 0; i < movies.length; i++){
+   if (id === i){
+     return movies[i]
+   }
+  }
+}
+
+console.log(getMovieById(movies, 7))
+
 /* Ex.17
     Write a function called "sumAllTheYears" which returns the sum of all the years in which the movies provided have been produced.
 */
