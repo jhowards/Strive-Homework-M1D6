@@ -501,6 +501,14 @@ console.log(removeIndex(movies, 3))
   ***
 */
 
+const halfTree = function(num){
+let asterisk = "*"
+  for (let i = 0; i < num + 1; i++){
+console.log(asterisk.repeat(i))
+  }
+}
+
+halfTree(7)
 /* Ex.22 
   Create a function called "tree" which receives a number as a parameter and builds an "*" tree with the given height.
   Example: 
