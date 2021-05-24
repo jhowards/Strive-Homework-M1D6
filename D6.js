@@ -377,17 +377,30 @@ console.log(countMovies(movies))
 */
 
 const onlyTheTitles = function(movies){
+let titleArray = []
+for (let i = 0; i < movies.length; i++){
+titleArray.push(movies[i].Title)
+}
+return titleArray
+}
+
+console.log(onlyTheTitles(movies))
+
+/* Ex.15
+   Write a function called "onlyInThisMillennium" which returns only the movies produced in this millennium.
+*/
+
+const onlyInThisMillennium = function(movies){
 let movieArray = []
 for (let i = 0; i < movies.length; i++){
-movieArray.push(movies[i].Title)
+  if (movies[i].Year >= 2000){
+    movieArray.push(movies[i].Title)
+  }
 }
 return movieArray
 }
 
-console.log(onlyTheTitles(movies))
-/* Ex.15
-   Write a function called "onlyInThisMillennium" which returns only the movies produced in this millennium.
-*/
+console.log(onlyInThisMillennium(movies))
 
 /* Ex.16 
     Write a function called "getMovieById" which receives an id as a parameter and returns the movie with the given id.
