@@ -367,11 +367,24 @@ console.log(olderMovie(movies))
     Write a function called "countMovies" which returns the number of movies contained in the array provided at the end of this file.
 */
 
+const countMovies = function(movies){
+  return movies.length
+}
+console.log(countMovies(movies))
 
 /* Ex.14
     Write a function called "onlyTheTitles" which creates an array with just the titles of the movies provided in the array at the end of the file.
 */
 
+const onlyTheTitles = function(movies){
+let movieArray = []
+for (let i = 0; i < movies.length; i++){
+movieArray.push(movies[i].Title)
+}
+return movieArray
+}
+
+console.log(onlyTheTitles(movies))
 /* Ex.15
    Write a function called "onlyInThisMillennium" which returns only the movies produced in this millennium.
 */
