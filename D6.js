@@ -446,13 +446,32 @@ moviesArray.push(title)
 return moviesArray
   }
 
-console.log(searchByTitle(movies, "war"))
+console.log(searchByTitle(movies, "rings"))
 
 /* Ex.19
     Write a function called "searchAndDivide" which receives a string as a parameter and returns an object;
     this object should contain an array called "match", made by all the movies which contain the given string in the title,
     and another array "unmatch" with all the remaining ones.
 */
+
+const searchAndDivide = function(movies, str){
+let movieObject = {match : [], unmatch : []}
+str = str.toUpperCase()
+
+for (let i = 0; i < movies.length; i++){
+  let title = movies[i].Title
+  if(title.toUpperCase().search(str) > -1){
+movieObject.match.push(title)
+  }
+  else{
+    movieObject.unmatch.push(title)
+  }
+}
+
+return movieObject
+}
+console.log(searchAndDivide(movies, "rings"))
+
 
 /* Ex.20
    Write a function called "removeIndex" which receives a number as a parameter and returns the movies array without the element in the given position.
