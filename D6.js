@@ -509,6 +509,8 @@ console.log(asterisk.repeat(i))
 }
 
 halfTree(7)
+
+
 /* Ex.22 
   Create a function called "tree" which receives a number as a parameter and builds an "*" tree with the given height.
   Example: 
@@ -521,5 +523,16 @@ halfTree(7)
 /* Ex.23
   Create a function called "isItPrime" that receives a number as a parameter and returns true if the given number is a prime number.
 */
+
+function isItPrime(num) {
+  for(let i = 2; i < num; i++){
+    if(num % i === 0){
+      return false;
+    } 
+  return num > 1;
+}
+}
+
+console.log(isItPrime(4))
 
 /* This movies array is used throughout the exercises. Please don't change it :)  */
